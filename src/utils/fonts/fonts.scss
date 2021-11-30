@@ -1,0 +1,21 @@
+/* Proxima Nova */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./ProximaNova-Regular.woff2") format("woff2"),
+       url("./ProximaNova-Regular.woff") format("woff"),
+       url("./ProximaNova-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./ProximaNova-Bold.woff2") format("woff2"),
+       url("./ProximaNova-Bold.woff") format("woff"),
+       url("./ProximaNova-Bold.ttf") format("ttf");
+}
