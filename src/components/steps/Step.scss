@@ -1,0 +1,406 @@
+@import '../../utils/variables.scss';
+
+.step{
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+
+  &_large{
+    width: 559px;
+  }
+
+  &__counter{
+    margin: 0 0 30px 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.21;
+    color: $subtitleColor;
+  }
+
+  &__title{
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.21;
+    color: $titleColor;
+  }
+
+  &__subtitle{
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.21;
+    color: $subtitleColor;
+
+    &_margin{
+      
+      &_large{
+        margin: 0 0 50px 0;
+      }
+
+      &_small{
+        margin: 0 0 10px 0;
+      }
+    }
+
+    &_italic{
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  &__list{
+    margin: 0 0 40px 0;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: my-counter;
+  }
+
+  &__item{
+    margin: 0 0 0 21px;
+    padding: 0 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.21;
+    color: $subtitleColor;
+    position: relative;
+    box-sizing: border-box;
+
+    &::before{
+      counter-increment: my-counter;
+      content: counter(my-counter)". ";
+      position: absolute;
+      left: -10px;
+    }
+
+    &_bonus{
+      margin: 0 0 20px 45px;
+
+      &::before{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 28px;
+        height: 28px;
+        top: 8px;
+        left: -31px;
+        border-radius: 50%;
+        background-color: $titleColor;
+        color: $counterColor;
+        font-size: 18px;
+        content: counter(my-counter);
+      }
+
+      &:last-of-type{
+        margin: 0 0 0 45px;
+      }
+    }
+
+    &_vektor{
+
+      &::before{
+        content: "";
+        background-image: url('../../images/icons/gift.svg');
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__button-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+    height: 60px;
+    border: none;
+    background-color: $buttonColor;
+    border-radius: 5px;
+    color: $counterColor;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.21;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &_size{
+      &_small{
+        width: 179px;
+        margin: 0 21px 0 0;
+
+        &:last-of-type{
+          margin: 0;
+        }
+      }
+    } 
+    
+    &_color{
+      &_grey{
+        background-color: $subtitleColor;
+      }
+    }
+
+    &_margin{
+
+      &_large{
+        margin: 0 0 56px 0;
+      }
+    }
+  }
+
+  &__span{
+    font-weight: 700;
+  }
+
+  &__offer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  &__icon{
+    margin: 0 0 0 10px;
+  }
+
+  &__link{
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    font-family: $mainFont;
+    font-weight: 700;
+    text-decoration: none;
+    color: $subtitleColor;
+  }
+
+  &__vektor{
+    width: 257px;
+    height: 62.22px;
+  }
+
+  &__mobile-container{
+    display: none;
+  }
+
+  &__mobile-image{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 980px){
+  .step{
+    width: 334px;
+
+    &_large{
+      width: 349px;
+    }
+
+    &_extra{
+      width: 369px;
+    }
+
+
+    &__counter{
+      font-size: 30px;
+      margin: 0 0 10px 0;
+    }
+
+    &__title{
+      font-size: 30px;
+      margin: 0 0 10px 0;
+
+      &_margin{
+
+        &_large{
+          margin: 0 0 20px 0;
+        }
+      }
+
+    }
+
+    &__subtitle{
+      font-size: 14px;
+      margin: 0 0 10px 0;
+
+      &_margin{
+        &_large{
+          margin: 0 0 20px 0;
+        }
+  
+        &_small{
+          margin: 0 0 5px 0;
+        }
+      }
+
+      &_bold{
+        margin: 15px 0 0 0;
+      }
+
+      &_italic{
+        font-size: 12px;
+      }
+    }
+
+    &__item{
+      font-size: 14px;
+
+      &_bonus{
+        margin: 0 0 20px 20px;
+
+        &::before{
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+          left: -15px;
+        }
+
+        &:last-of-type{
+          margin: 0 0 0 20px;
+        }
+      }
+
+      &_vektor{
+
+        &::before{
+          background-size: 12.86px;
+        }
+      }
+    }
+
+    &__list{
+      margin: 0 0 15px 0;
+    }
+
+    &__button{
+      width: 280px;
+      height: 40px;
+      font-size: 14px;
+
+      &_size{
+        &_small{
+          width: 150px;
+          margin: 0 20px 0 0;
+        }
+      }
+
+      &_margin{
+        &_large{
+          margin: 0 0 20px 0;
+        }
+      }
+    }
+
+    &__link{
+      margin: 15px 0 0 0;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .step{
+    width: 80%;
+
+    &__button{
+      align-self: center;
+    }
+
+    &__button-container{
+      align-self: center;
+    }
+
+    &__offer{
+      align-self: center;
+    }
+
+    &__mobile-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 540px){
+  .step{
+    width: 90%;
+  }
+}
+
+@media screen and(max-width: 480px){
+  .step{
+    width: 100%;
+
+    &_extra{
+      width: 281px;
+    }
+
+    &__counter{
+      margin: 0 0 15px 0;
+      font-size: 20px;
+    }
+
+    &__mobile-image{
+      width: 100%;
+    }
+
+    &__mobile-vektor{
+      margin: 0 0 15px 0;
+    }
+
+    &__title{
+      margin: 0 0 10px 0;
+      font-size: 20px;
+
+      &_margin{
+
+        &_large{
+          margin: 0 0 15px 0;
+        }
+      }
+    }
+
+    &__subtitle{
+      font-size: 12px;
+      margin: 0 0 10px 0;
+
+      &_margin{
+      
+        &_large{
+          margin: 0 0 15px 0;
+        }
+      }
+    }
+
+    &__item{
+      font-size: 12px;
+
+      &_bonus{
+        margin: 0 0 10px 20px;
+
+        &:last-of-type{
+          margin: 0 0 0 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 368px){
+  .step{
+
+    &__button{
+      width: 100%;
+    }
+  }
+}

@@ -19,3 +19,13 @@
        url("./ProximaNova-Bold.woff") format("woff"),
        url("./ProximaNova-Bold.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./ProximaNova-RegularIt.woff2") format("woff2"),
+       url("./ProximaNova-RegularIt.woff") format("woff"),
+       url("./ProximaNova-RegularIt.ttf") format("ttf");
+}
