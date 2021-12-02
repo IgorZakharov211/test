@@ -1,0 +1,95 @@
+@import '../../utils/variables.scss';
+
+.steps{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1180px;
+  box-sizing: border-box;
+
+  &__counter{
+    margin: 0 135px 0 17px;
+  }
+
+  &__image-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__vektor{
+    position: absolute;
+    bottom: -72.22px;
+    left: -90px;
+    width: 257px;
+    height: 62.22px;
+  }
+
+  
+}
+
+@media screen and (max-width: 1280px){
+  .steps{
+    width: calc(100% - 100px);
+
+    &__counter{
+      margin: 0 40px 0 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .steps{
+
+    &__image-container{
+      width: 35%;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px){
+  .steps{
+
+    &__image-container{
+      width: 30%;
+    }
+
+    &__vektor{
+      left: -120px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .steps{
+    width: calc(100% - 80px);
+
+    &__image-container{
+      width: 35%;
+    }
+
+    &__vektor{
+      bottom: -92.22px;
+      left: -100px;
+      width: 169px;
+      height: 64px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .steps{
+    width: calc(100% - 40px);
+    flex-direction: column;
+
+    &__counter{
+      margin: 0 0 26px 0;
+    }
+
+    &__image-container{
+      display: none;
+    }
+  }
+}
+

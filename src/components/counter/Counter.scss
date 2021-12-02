@@ -1,0 +1,137 @@
+@import '../../utils/variables.scss';
+
+.counter{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__border{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-top: -6px;
+    background: none;
+    z-index: 1;
+
+    &_active{
+      border: 1px solid $enableColor;
+      border-radius: 50%;
+    }
+  }
+
+  &__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    background-color: $disableColor ;
+    border-radius: 50%;
+    color: $counterColor;
+    font-family: $mainFont;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+
+    &_active{
+      background-color: $enableColor;
+    }
+  }
+
+  &__line{
+    position: relative;
+    margin-top: -6px;
+    width: 2px;
+    height: 76px;
+    background-color: $disableColor;
+    z-index: 0;
+
+    &_active{
+      background-color: $enableColor;
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .counter{
+
+    &__border{
+      width: 30.37px;
+      height: 30.37px;
+      margin-top: -3.795px;
+    }
+
+    &__button{
+      width: 22.78px;
+      height: 22.78px;
+      font-size: 14px;
+    }
+
+    &__line{
+      height: 48.08px;
+      margin-top: -3.795px;
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .counter{
+    flex-direction: row;
+
+    &__item{
+      flex-direction: row;
+    }
+
+    &__line{
+      height: 2px;
+      width: 76px;
+      margin: 0;
+    }
+
+    &__border{
+      width: 22.78px;
+      height: 22.78px;
+      margin: 0;
+
+      &_active{
+        width: 30.37px;
+        height: 30.37px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px){
+  .counter{
+
+    &__line{
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px){
+  .counter{
+
+    &__line{
+      width: 40px;
+    }
+  }
+}
