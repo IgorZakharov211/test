@@ -16,6 +16,8 @@ https://www.figma.com/file/28jNiQQwD8EyKZputKENe3/GiveAway-(Copy)-
 
 ## Роуты
 
-* **"/"** - Страница с 5 этапами;
-* **"/product"** - Страница с выбранным товаром.
+* **"/"** - Страница с 5 этапами: https://test.zakharovigor.ru/
+
+* **"/product"** - Страница с выбранным товаром: https://test.zakharovigor.ru/product
+
 
