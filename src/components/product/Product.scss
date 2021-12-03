@@ -1,0 +1,39 @@
+@import '../../utils/variables.scss';
+
+.product{
+  width: 1180px;
+
+  &__select{
+    margin: 0 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 1280px){
+  .product{
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (max-width: 980px){
+  .product{
+    width: calc(100% - 80px);
+  }
+}
+
+@media screen and (max-width: 860px){
+  .product{
+    &__select{
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  .product{
+    width: calc(100% - 40px);
+
+    &__select{
+      margin: 0 0 20px 0;
+    }
+  }
+}

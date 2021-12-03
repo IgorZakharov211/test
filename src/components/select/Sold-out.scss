@@ -1,0 +1,31 @@
+@import '../../utils/variables.scss';
+
+.sold-out{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 144px;
+  height: 32px;
+  background-color: $accentColor;
+  border-radius: 5px;
+
+  &__text{
+    font-family: $mainFont;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 980px){
+  .sold-out{
+    width: 103px;
+    height: 23px;
+
+    &__text{
+      font-size: 12px;
+    }
+  }
+}

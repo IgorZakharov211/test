@@ -1,0 +1,35 @@
+@import '../../utils/variables.scss';
+
+.description{
+  max-width: 380px;
+
+  &__title{
+    margin: 0 0 6px 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+  }
+
+  &__subtitle{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+    color: $subtitleColor;
+  }
+}
+
+@media screen and (max-width: 980px){
+  .description{
+    max-width: 230px;
+
+    &__title{
+      margin: 0 0 1px 0;
+      font-size: 12px;
+    }
+
+    &__subtitle{
+      font-size: 12px;
+    }
+  }
+}
