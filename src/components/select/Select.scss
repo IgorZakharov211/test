@@ -1,0 +1,436 @@
+@import '../../utils/variables.scss';
+
+.select{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  &__images{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    margin: 0 50px 0 0;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  &__slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 500px;
+    margin: 0;
+  }
+
+  &__control{
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    background-size: cover;
+    cursor: pointer;
+    
+    &_up{
+      background-image: url('../../images/icons/arrow_up.svg');
+    }
+
+    &_down{
+      background-image: url('../../images/icons/arrow_down.svg');
+    }
+  }
+
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item{
+    margin: 0 0 15px 0;
+    padding: 0;
+
+    &:last-child{
+      margin: 0;
+    }
+  }
+
+  &__choose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+
+    &:hover .select__thumb{
+      border: 1px solid #DDDDDD;
+    }
+
+    &_active{
+
+      &:hover .select__thumb{
+        border: 1px solid #2196F3;
+      }
+    }
+
+    &_active .select__thumb{
+      border: 1px solid #2196F3;
+    }
+  }
+
+  &__thumb{
+    width: 120px;
+    height: 120px;
+  }
+
+  &__image{
+    max-width: 440px;
+    width: 30vw;
+    margin: 0 30px;
+  }
+
+  &__about{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 23px 0;
+  }
+
+  &__status{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__reviews{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__stars{
+    width: 88px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    background-image: url('../../images/product/stars.svg');
+    background-size: cover;
+  }
+
+  &__counter{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+    color: $subtitleColor;
+  }
+
+  &__title{
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  &__description{
+    margin: 0 0 30px 0;
+  }
+
+  &__sold-out{
+    margin: 0 0 30px 0;
+  }
+
+  &__line{
+    margin: 0 0 20px 0;
+    width: 380px;
+    height: 1px;
+    background-color: #C4C4C4;
+  }
+
+  &__price{
+    margin: 0 0 30px 0;
+  }
+
+  &__button{
+    width: 380px;
+    height: 60px;
+    background-color: $titleColor;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__prime{
+    width: 200px;
+    height: 34.65px;
+    margin: 20px 0 0 90px;
+    background-image: url('../../images/product/prime.png');
+    background-size: cover;
+  }
+}
+
+@media screen and(max-width: 1100px){
+  .select{
+
+    &__images{
+      padding: 16px;
+      margin: 0 40px 0 0;
+    }
+
+    &__slider{
+      width: 100px;
+      height: 370px;
+    }
+
+    &__item{
+      margin: 0 0 8px 0;
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    &__image{
+      max-width: 234px;
+    }
+
+    &__choose{
+      width: 100px;
+      height: 100px;
+    }
+
+    &__thumb{
+      width: 100px;
+      height: 100px;
+    }
+
+    &__control{
+      height: 21.6px;
+      width: 21.6px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .select{
+    &__status{
+      font-size: 12px;
+    }
+
+    &__stars{
+      width: 66px;
+      height: 12px;
+    }
+
+    &__counter{
+      font-size: 12px;
+    }
+
+    &__rating{
+      margin: 0 0 30px 0;
+    }
+
+    &__title{
+      font-size: 18px;
+      margin: 0 0 10px 0;
+    }
+
+    &__description{
+      margin: 0 0 15px 0;
+    }
+
+    &__sold-out{
+      margin: 0 0 15px 0;
+    }
+
+    &__line{
+      width: 294px;
+      margin: 0 0 15px 0;
+    }
+
+    &__price{
+      margin: 0 0 15px 0;
+    }
+
+    &__button{
+      width: 294px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    &__prime{
+      width: 160px;
+      height: 27.72px;
+      margin: 20px 0 0 67px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px){
+  .select{
+
+    &__images{
+      max-width: 340px;
+      height: 300px;
+    }
+
+    &__image{
+      margin: 0 0 0 20px;
+    }
+
+    &__slider{
+      width: 64.76px;
+      height: 269.36px;
+    }
+
+    &__choose{
+      width: 64.76px;
+      height: 64.76px;
+    }
+
+    &__thumb{
+      width: 64.76px;
+      height: 64.76px;
+    }
+
+    &__control{
+      height: 21.6px;
+      width: 21.6px;
+    }
+  }
+}
+
+@media screen and (max-width:740px){
+  .select{
+
+    &__image{
+      width: 25vw;
+    }
+
+    &__images{
+      margin: 0 16px 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 630px){
+  .select{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    &__images{
+      justify-content: center;
+      width: 100%;
+      max-width: none;
+      margin: 0 0 25px 0;
+    }
+
+    &__image{
+      width: 45vw;
+      max-width: none;
+    }
+
+    &__about{
+      width: 100%;
+    }
+
+    &__line{
+      width: 100%;
+    }
+
+    &__button{
+      align-self: center;
+    }
+
+    &__prime{
+      margin: 20px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .select{
+
+    &__images{
+      padding: 12px;
+    }
+
+    &__slider{
+      width: 50px;
+      height: 226px;
+    }
+
+    &__item{
+      margin: 0 0 10px 0;
+
+      &:last-child{
+        margin: 0;
+      }
+    }
+
+    &__choose{
+      width: 50px;
+      height: 50px;
+    }
+
+    &__thumb{
+      width: 50px;
+      height: 50px;
+    }
+
+    &__control{
+      width: 18px;
+      height: 18px;
+    }
+
+    &__image{
+      width: 56vw;
+      margin: 0 0 0 15px;
+    }
+
+    &__rating{
+      margin: 0 0 10px 0;
+    }
+
+    &__title{
+      margin: 0 0 15px 0;
+    }
+
+    &__description{
+      margin: 0 0 20px 0;
+    }
+
+    &__sold-out{
+      margin: 0 0 20px 0;
+    }
+
+    &__button{
+      width: 100%;
+    }
+  }
+}
+
+

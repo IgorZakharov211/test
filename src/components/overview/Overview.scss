@@ -1,0 +1,136 @@
+@import '../../utils/variables.scss';
+
+.overview{
+  width: 650px;
+
+  &__title{
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 48px;
+    line-height: 1.21;
+    font-weight: 700;
+  }
+
+  &__subtitle{
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+
+    &_display{
+      &_none{
+        display: none;
+      }
+    }
+  }
+
+  &__text{
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+    color: $subtitleColor;
+
+    &_display{
+      &_none{
+        display: none;
+      }
+    }
+  }
+
+  &__list{
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  &__item{
+    margin: 0 0 0 16px;
+    padding: 0;
+    color: $subtitleColor;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 400;
+  }
+
+  &__readmore{
+    padding: 0;
+    background: none;
+    border: none;
+    font-family: $mainFont;
+    color: $subtitleColor;
+    font-size: 18px;
+    line-height: 1.21;
+    font-weight: 700;
+    cursor: pointer;
+
+    &_display{
+      &_none{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .overview{
+    width: 540px;
+
+    &__title{
+      font-size: 30px;
+      margin: 0 0 5px 0;
+    }
+
+    &__subtitle{
+      font-size: 14px;
+      margin: 0 0 5px 0;
+    }
+
+    &__text{
+      font-size: 14px;
+      margin: 0 0 10px 0;
+    }
+
+    &__item{
+      margin: 0 0 0 12px;
+      font-size: 14px;
+    }
+
+    &__list{
+      margin: 0 0 10px 0;
+    }
+
+    &__readmore{
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px){
+  .overview{
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .overview{
+    width: 100%;
+
+    &__title{
+      font-size: 20px;
+      margin: 0 0 10px 0;
+    }
+
+    &__text{
+      font-size: 12px;
+    }
+
+    &__item{
+      margin: 0 0 0 10px;
+      font-size: 12px;
+    }
+
+    &__readmore{
+      font-size: 14px;
+    }
+  }
+}
